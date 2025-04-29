@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SpaceRocks</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: black;
+    }
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: black;
+      display: block;
+      z-index: 0;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="space"></canvas>
+  <script src="stars.js"></script>
+</body>
+</html>
+
+
+// This is a simple starfield effect that uses the mouse position to push the stars away from the mouse.
+// It's a fun way to create a dynamic and interactive background.
