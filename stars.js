@@ -9,7 +9,7 @@ canvas.height = height;
 // Add mouse position tracking
 let mouseX = width / 2;
 let mouseY = height / 2;
-let mouseRadius = 150; // Area of influence
+let mouseRadius = 90; // Area of influence
 
 canvas.addEventListener('mousemove', (e) => {
     mouseX = e.clientX;
@@ -25,7 +25,7 @@ window.addEventListener('resize', () => {
 });
 
 // Starfield setup
-const STAR_COUNT = 5000;
+const STAR_COUNT = 10000;
 const stars = [];
 for (let i = 0; i < STAR_COUNT; i++) {
     const x = (Math.random() - 0.5) * width;
@@ -54,7 +54,7 @@ function drawStars() {
         if (distance < mouseRadius) {
             const force = (mouseRadius - distance) / mouseRadius;
             star.x += dx * force * 0.1;
-            star.y += dy * force * 0.1;
+            star.y += dy * force * 1;
         }
 
         // Return to original position gradually
